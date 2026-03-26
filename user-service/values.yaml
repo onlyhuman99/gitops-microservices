@@ -1,0 +1,17 @@
+replicaCount: 2
+
+image:
+  repository: user-service
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 30007
+
+container:
+  port: 3000
+
+resources: {}
